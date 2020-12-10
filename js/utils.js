@@ -1,4 +1,5 @@
 var app = app || {};
+var BASE_URL = 'http://localhost:8080';
 
 (function () {
 	'use strict';
@@ -27,7 +28,7 @@ var app = app || {};
 
 		// Post to the API to store todos
 		store: function (data) {
-			fetch(BASE_PATH + 'api/todos', { method: 'POST',
+			fetch(BASE_URL + '/api/todos', { method: 'POST',
 				body: JSON.stringify(data)
 			}).then(function(response) {
 				return response.json();
@@ -40,7 +41,7 @@ var app = app || {};
 
 		// Fetch todos from the API
 		load: function(callback) {
-			fetch(BASE_PATH + 'api/todos').then(function(response) {
+			fetch(BASE_URL + '/api/todos').then(function(response) {
 				return response.json();
 			}).then(function(json) {
 				return callback(null, json);
