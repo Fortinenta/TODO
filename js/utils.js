@@ -1,5 +1,5 @@
 var app = app || {};
-var BASE_URL = 'http://localhost:8080';
+var BASE_URL = 'https://fn5bir70ng.execute-api.us-east-1.amazonaws.com/Prod/api/todos';
 
 (function () {
 	'use strict';
