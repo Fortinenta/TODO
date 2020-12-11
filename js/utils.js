@@ -1,5 +1,5 @@
 var app = app || {};
-var BASE_URL = 'https://fn5bir70ng.execute-api.us-east-1.amazonaws.com/Prod/api/todos';
+var BASE_URL = 'https://p2bjxxl9ch.execute-api.us-east-1.amazonaws.com/default/todo-api/todos';
 
 (function () {
 	'use strict';
