@@ -1,5 +1,5 @@
 var app = app || {};
-var BASE_URL = 'https://p2bjxxl9ch.execute-api.us-east-1.amazonaws.com/default';
+var BASE_URL = 'https://p2bjxxl9ch.execute-api.us-east-1.amazonaws.com/default/todos';
 
 (function () {
 	'use strict';
@@ -28,7 +28,7 @@ var BASE_URL = 'https://p2bjxxl9ch.execute-api.us-east-1.amazonaws.com/default';
 
 		// Post to the API to store todos
 		store: function (data) {
-			fetch(BASE_URL + '/todo-api/todos', { method: 'POST',
+			fetch(BASE_URL + '/store', { method: 'POST',
 				body: JSON.stringify(data)
 			}).then(function(response) {
 				return response.json();
@@ -41,7 +41,7 @@ var BASE_URL = 'https://p2bjxxl9ch.execute-api.us-east-1.amazonaws.com/default';
 
 		// Fetch todos from the API
 		load: function(callback) {
-			fetch(BASE_URL + '/todo-api/todos').then(function(response) {
+			fetch(BASE_URL + '/all').then(function(response) {
 				return response.json();
 			}).then(function(json) {
 				return callback(null, json);
